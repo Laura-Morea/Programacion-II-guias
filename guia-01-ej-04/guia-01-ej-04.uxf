@@ -1,0 +1,12 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>120</x><y>100</y><w>330</w><h>190</h></coordinates><panel_attributes>Fecha
+--
+dia: int
+mes: int
+anio: int
+_+ DIA_MAXIMO_MES_
+_+ DIA_MESES_30_
+_+ DIAS_FEBRERO_
+--
++ fechaFormatoDdMmAa(): String
++ esNavidad(): boolean
++ sumarUnMes(): void</panel_attributes><additional_attributes></additional_attributes></element></diagram>

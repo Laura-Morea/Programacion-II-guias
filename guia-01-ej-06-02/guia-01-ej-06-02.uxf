@@ -1,0 +1,29 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>120</x><y>100</y><w>330</w><h>300</h></coordinates><panel_attributes>Empleado
+--
+- DNI: String
+- nombre: String
+- apellido: String
+- salarioBase: double
+- cantHijos: int
+_+ PORC_AUMENTO_HIJOS_
+_+ PORC_AUMENTO_LIMITE_
+_+ PORC_DESCUENTO_SOLTERO_
+--
++ Empleado(String,String,String,double,EstadoCivil,int)
++ getDNI(): String
++ getNombreYApellido(): String
++ getEstadoCivil(): EstadoCivil
++ getCantHijos(): int
++ setNombreYApellido(String,String): void
++ setEstadoCivil(EstadoCivil): void
++ setCantHijos(int): void
++ obtenerSalarioFinal(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>100</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EstadoCivil
+--
+SOLTERO
+CASADO
+VIUDO
+SOLTERO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>140</y><w>140</w><h>50</h></coordinates><panel_attributes>- EstadoCivil
+lt=&lt;-(+)
+
+m1=1</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element></diagram>
