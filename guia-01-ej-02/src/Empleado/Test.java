@@ -10,7 +10,23 @@ public class Test {
 
     public static void main(String[] args) {
         Empleado e1 = new Empleado();
-        System.out.println("Su salario final es de $" + e1.obtenerSalarioFinal());
+        Empleado e2 = new Empleado();
+        Empleado e3 = new Empleado();
+        e1.nombre="Laura";
+        e1.salarioBase=200000;
+        e1.cantHijos=0;
+        e1.estadoCivil=e1.estadoCivil.SOLTERO;
+        e2.nombre="Marcela";
+        e2.salarioBase=300000;
+        e2.cantHijos=2;
+        e2.estadoCivil=e1.estadoCivil.VIUDO;
+        e3.nombre="Jose";
+        e3.salarioBase=500000;
+        e3.cantHijos=5;
+        e3.estadoCivil=e1.estadoCivil.SOLTERO;
+        System.out.println("El salario final de "+ e1.nombre +" es de $" + e1.obtenerSalarioFinal());
+        System.out.println("El salario final de "+ e2.nombre +" es de $" + e2.obtenerSalarioFinal());
+        System.out.println("El salario final de "+ e3.nombre +" es de $" + e3.obtenerSalarioFinal());
     }
     
 }
