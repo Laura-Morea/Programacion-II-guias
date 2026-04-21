@@ -7,9 +7,9 @@ public class Empleado {
     private double salarioBase;
     private EstadoCivil estadoCivil;
     private int cantHijos;
-    public static final double PORC_AUMENTO_HIJOS=3/100;
-    public static final double PORC_AUMENTO_LIMITE=10/100;
-    public static final double PORC_DESCUENTO_SOLTERO=4/100;
+    public static final double PORC_AUMENTO_HIJOS=0.03;
+    public static final double PORC_AUMENTO_LIMITE=0.10;
+    public static final double PORC_DESCUENTO_SOLTERO=0.04;
 
     public enum EstadoCivil {
         SOLTERO,
@@ -23,11 +23,10 @@ public class Empleado {
 
     public Empleado(String DNI, String nombre, String apellido, double salarioBase, EstadoCivil estadoCivil, int cantHijos) {
         this.DNI = DNI;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        setNombreYApellido(nombre,apellido);
         this.salarioBase = salarioBase;
-        this.estadoCivil = estadoCivil;
-        this.cantHijos = cantHijos;
+        setEstadoCivil(estadoCivil);
+        setCantHijos(cantHijos);
     }
 
     public String getDNI() {
@@ -47,7 +46,7 @@ public class Empleado {
     }
 
     public void setNombreYApellido(String nombre, String apellido) {
-        if(!"".equals(nombre)&&!"".equals(apellido)){
+        if(nombre!=null&&nombre.length()>=3&&apellido!=null&&apellido.length()>=2){
             this.nombre = nombre;
             this.apellido = apellido;
         }
@@ -65,13 +64,13 @@ public class Empleado {
     public double obtenerSalarioFinal(){
         double salarioFinal=salarioBase;
         if(cantHijos!=0){
-            salarioFinal=salarioFinal*(1+PORC_AUMENTO_HIJOS)*cantHijos;
+            salarioFinal=salarioFinal*(1+PORC_AUMENTO_HIJOS*cantHijos);
             if(salarioFinal>salarioBase*(1+PORC_AUMENTO_LIMITE)){
                 salarioFinal=salarioBase*(1+PORC_AUMENTO_LIMITE);
             }
-        }
-        if(estadoCivil.equals(EstadoCivil.SOLTERO)){
+            if(estadoCivil.equals(EstadoCivil.SOLTERO)){
             salarioFinal=salarioFinal*(1-PORC_DESCUENTO_SOLTERO);
+            }
         }
         return salarioFinal;
     }
