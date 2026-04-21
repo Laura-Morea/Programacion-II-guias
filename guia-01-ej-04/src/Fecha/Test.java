@@ -1,5 +1,12 @@
 package Fecha;
 
+/*Modelá la clase Fecha, la cual posea como atributos el día, el mes y el año. Luego, implementá 
+métodos que permitan: 
+▪ Obtener la fecha como cadena, en formato "dd/mm/aaaa". 
+▪ Saber si es Navidad. 
+▪ Sumar un mes. 
+Finalmente, instanciá una fecha en el método main y probá todos sus métodos. */
+
 public class Test {
 
     public static void main(String[] args) {
@@ -37,7 +44,7 @@ public class Test {
 
         // Probando paso de Noviembre a Diciembre
         Fecha f3 = new Fecha();
-        f3.dia = 15;
+        f3.dia = 25;
         f3.mes = 11; // Noviembre
         f3.anio = 2025;
         

@@ -4,9 +4,9 @@ public class Fecha {
     int dia;
     int mes;
     int anio;
-    public static final int DIA_MAXIMO_MES=31;
-    public static final int DIA_MESES_30=30;
-    public static final int DIAS_FEBRERO=28;
+    static final int DIA_MAXIMO_MES=31;
+    static final int DIA_MESES_30=30;
+    static final int DIAS_FEBRERO=28;
     
     public String fechaFormatoDdMmAa(){
         return dia+"/"+mes+"/"+anio%100;
@@ -21,10 +21,10 @@ public class Fecha {
             mes=(mes)%12+1;
         } else if(mes==1){
             mes+=2;
-            dia=dia%28;
+            dia=dia%(DIAS_FEBRERO-1)+1;
         } else {
             mes+=2;
-            dia=dia%30;
+            dia=dia%(DIA_MAXIMO_MES-1)+1;
         }
     }
 }
