@@ -7,6 +7,7 @@ public class Fecha {
     public static final int DIA_MAXIMO_MES=31;
     public static final int DIA_MESES_30=30;
     public static final int DIAS_FEBRERO=28;
+    public static final int CANT_MESES=12;
 
     public Fecha(int dia, int mes, int anio) {
         setFecha(dia,mes,anio);
@@ -14,10 +15,6 @@ public class Fecha {
 
     public int getDia() {
         return dia;
-    }
-
-    public boolean isFechaValida(int dia, int mes, int anio){   
-        return ((dia>0&&mes>0&&mes<=12)&&((dia<=DIAS_FEBRERO)||(mes!=2&&dia<=DIA_MESES_30)||(dia==DIA_MAXIMO_MES&&(mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12))));
     }
 
     public int getMes() {
@@ -30,21 +27,28 @@ public class Fecha {
 
 // La fecha es invalida porque me paso y por eso no lo setea, tengo que fijarme como hacerla válida.
     public void setFecha(int dia, int mes, int anio) {
-        int nuevoDia,nuevoMes,nuevoAnio;
         if(mes==2){
-                nuevoDia = (dia-1)%DIAS_FEBRERO+1;
-            } else if(mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12){
-                nuevoDia = (dia-1)%(DIA_MAXIMO_MES)+1;
-            } else{
-                nuevoDia = (dia-1)%DIA_MESES_30+1;
-            }
-            nuevoMes = (mes-1)%12+1;
-            nuevoAnio = anio; 
+            if(dia==DIAS_FEBRERO)
+                this.dia=DIAS_FEBRERO;
+            else
+                this.dia = dia%(DIAS_FEBRERO);
+        } else if(mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12){
+            if(dia==DIA_MAXIMO_MES)
+                this.dia=DIA_MAXIMO_MES;
+            else 
+                this.dia = dia%(DIA_MAXIMO_MES);
+        } else{
+            if(dia==DIA_MESES_30)
+                this.dia=DIA_MESES_30;
+            else
+                this.dia = dia%(DIA_MESES_30);
         }
-        if(isFechaValida(nuevoDia,nuevoMes,nuevoAnio)){
-            
-        }
-    }
+        if(mes==CANT_MESES)
+            this.mes=CANT_MESES;
+            else
+            this.mes = (mes)%CANT_MESES;
+        this.anio = anio; 
+   } //necesito en cierta forma encadenar dias y meses
  
     public String fechaFormatoDdMmAa(){
         return dia+"/"+mes+"/"+anio%100;
@@ -55,12 +59,7 @@ public class Fecha {
     }
     
     public void sumarUnMes(){
-        if(mes!=12){
-            setFecha(dia,(mes+1),anio);
-        } else{
-            setFecha(dia,1,anio+1);
-        }
-
+        setFecha(dia,(mes+1),anio);
     }
 
     @Override

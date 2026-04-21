@@ -1,41 +1,52 @@
 package Fecha;
 
+/*Refactoreá las clases de los cuatros ejercicios anteriores con los siguientes cambios: 
+▪ Agregar un constructor que inicialice todos sus atributos por parámetro. 
+▪ Establecer sus atributos como privados y colocar los getters/setters que correspondan. 
+▪ Implementar el método toString() y comprobar su funcionamiento. */
+
 public class Test {
 
     public static void main(String[] args) {
 
-        // 1. Probar Constructor y Validaciones
-        System.out.println("--- Prueba de Construccion y Validacion ---");
-        Fecha fecha1 = new Fecha(25, 12, 2026); // Fecha válida
-        Fecha fechaInvalida = new Fecha(31, 4, 2026); // Abril tiene 30, debería fallar
+        // Creacion de una fecha normal
+        Fecha f1 = new Fecha(10, 5, 2024);
+        System.out.println("Fecha 1 creada: " + f1.toString());
+        System.out.println("Formato corto: " + f1.fechaFormatoDdMmAa());
+        System.out.println("Es Navidad? " + f1.esNavidad());
 
-        System.out.println("Fecha 1 (Navidad): " + fecha1.fechaFormatoDdMmAa());
-        
-        // Si la validación falló en el constructor, los valores serán 0
-        System.out.println("Fecha invalida (31/4): " + fechaInvalida.fechaFormatoDdMmAa());
+        System.out.println("------------------------------------");
 
-        // 2. Probar esNavidad
-        System.out.println("\n--- Prueba de esNavidad ---");
-        System.out.println("La fecha 1 es Navidad?: " + (fecha1.esNavidad() ? "Si" : "No"));
-        
-        Fecha cumple = new Fecha(15, 5, 1995);
-        System.out.println("El " + cumple.fechaFormatoDdMmAa() + " es Navidad?: " + (cumple.esNavidad()? "Si" : "No"));
+        // Prueba de Navidad
+        Fecha f2 = new Fecha(25, 12, 2024);
+        System.out.println("Fecha 2 creada: " + f2.toString());
+        System.out.println("Es Navidad? " + f2.esNavidad());
 
-        // 3. Probar sumarUnMes
-        System.out.println("\n--- Prueba de sumarUnMes ---");
-        
-        // Caso A: Un mes normal
-        Fecha f2 = new Fecha(10, 3, 2026);
-        System.out.print(f2.fechaFormatoDdMmAa() + " + 1 mes = ");
-        f2.sumarUnMes();
-        System.out.println(f2.fechaFormatoDdMmAa());
+        System.out.println("------------------------------------");
 
-        // Caso B: Probar el salto que definiste con el módulo %12
-        Fecha f3 = new Fecha(31, 12, 2026);
-        System.out.print(f3.isFechaValida(f3.getDia(),f3.getMes(),f3.getAnio())+f3.fechaFormatoDdMmAa() + " (Diciembre) + 2 meses = ");
+        // Prueba de sumar un mes y validacion de Febrero (segun tu logica de setFecha)
+        Fecha f3 = new Fecha(15, 1, 2025);
+        System.out.println("Fecha inicial: " + f3.toString());
         f3.sumarUnMes();
-        System.out.println(f3.toString());
-        f3.sumarUnMes();
-        System.out.println(f3.fechaFormatoDdMmAa());
+        System.out.println("Despues de sumar un mes (deberia ser Febrero): " + f3.toString());
+
+        System.out.println("------------------------------------");
+
+        // Prueba de getters individuales
+        System.out.println("Dia de f3: " + f3.getDia());
+        System.out.println("Mes de f3: " + f3.getMes());
+        System.out.println("Anio de f3: " + f3.getAnio());
+
+        System.out.println("------------------------------------");
+
+        // Prueba de setFecha con valores que exceden los limites
+        Fecha f4 = new Fecha(31, 12, 2023);
+        System.out.println("Fecha con mes 12 antes de setFecha: " + f4.toString());
+        f4.sumarUnMes();
+        System.out.println("Resultado de sumar mes: " + f4.toString());
+        f4.sumarUnMes();
+        System.out.println("Resultado de otro mes: " + f4.toString());
+        f4.sumarUnMes();
+        System.out.println("Resultado de otro mes: " + f4.toString());
     }
 }
