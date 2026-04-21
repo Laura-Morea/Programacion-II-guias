@@ -8,12 +8,13 @@ public class CuentaBancaria {
     public enum Tipo {
         CAJA_DE_AHORRO,
         CUENTA_CORRIENTE;
-        
+ 
         private Tipo() {
         }
     }
 
     public CuentaBancaria(String CBU, Tipo tipo) {
+        if(CBU!=null&&CBU.length()>10)
         this.CBU = CBU;
         this.tipo = tipo;
         this.saldo = 0;

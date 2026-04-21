@@ -1,11 +1,16 @@
 package CuentaBancaria;
 
+/*Refactoreá las clases de los cuatros ejercicios anteriores con los siguientes cambios: 
+▪ Agregar un constructor que inicialice todos sus atributos por parámetro. 
+▪ Establecer sus atributos como privados y colocar los getters/setters que correspondan. 
+▪ Implementar el método toString() y comprobar su funcionamiento. */
+
 public class Test {
 
     public static void main(String[] args) {
        // 1. Creamos dos cuentas para probar las diferencias de tipo
-        CuentaBancaria cajaAhorro = new CuentaBancaria("285000123456789", CuentaBancaria.Tipo.CAJA_DE_AHORRO);
-        CuentaBancaria cuentaCorriente = new CuentaBancaria("285000987654321", CuentaBancaria.Tipo.CUENTA_CORRIENTE);
+        CuentaBancaria cajaAhorro = new CuentaBancaria("285123456789", CuentaBancaria.Tipo.CAJA_DE_AHORRO);
+        CuentaBancaria cuentaCorriente = new CuentaBancaria("285987654321", CuentaBancaria.Tipo.CUENTA_CORRIENTE);
         
         System.out.println("--- Estado Inicial ---");
         System.out.println(cajaAhorro.toString());
