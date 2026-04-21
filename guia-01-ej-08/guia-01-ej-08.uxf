@@ -1,8 +1,8 @@
 <diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>160</x><y>100</y><w>210</w><h>150</h></coordinates><panel_attributes>Password
 --
 - password: String
-_+ CARACTERES_FUERTE_
-_+ CARACTERES_PARA_NUEVA_
+_+ CARACTERES_FUERTE: int_
+_+ CARACTERES_PARA_NUEVA: int_
 --
 + Password()
 + Password(int)
