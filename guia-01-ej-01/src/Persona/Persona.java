@@ -3,9 +3,9 @@ package Persona;
 import java.time.LocalDate;
 
 public class Persona {
-    private String nombre;
-    private String apellido;
-    private int anioNacimiento;
+    String nombre;
+    String apellido;
+    int anioNacimiento;
     
     public String getNombreCompleto(){
         return nombre + " " + apellido;

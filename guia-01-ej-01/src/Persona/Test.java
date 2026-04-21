@@ -1,5 +1,16 @@
 package Persona;
 
+/*1) Modelá la clase Persona, la cual posea como atributos nombre, apellido y año de nacimiento. 
+Luego, implementá métodos que permitan: 
+▪ Devolver el nombre completo de la persona. 
+▪ Mostrar su estado en la consola. 
+▪ Obtener su edad actual. 
+▪ Saber si es mayor que una edad dada. 
+▪ Cambiar su nombre. 
+▪ Cambiar su apellido. 
+▪ Cambiar su nombre y su apellido. 
+Finalmente, instanciá una persona en el método main y probá todos sus métodos. */
+
 public class Test {
 
     public static void main(String[] args) {
