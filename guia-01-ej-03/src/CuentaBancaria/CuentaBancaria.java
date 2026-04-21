@@ -1,11 +1,11 @@
 package CuentaBancaria;
 
 public class CuentaBancaria {
-    private String CBU="27141513538";
-    private Tipo tipo=Tipo.CUENTA_CORRIENTE;
-    private double saldo;
+    String CBU;
+    Tipo tipo=Tipo.CUENTA_CORRIENTE;
+    double saldo;
 
-    public enum Tipo {
+    enum Tipo {
         CAJA_DE_AHORRO,
         CUENTA_CORRIENTE;
         
