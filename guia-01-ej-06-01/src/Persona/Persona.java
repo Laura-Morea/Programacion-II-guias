@@ -8,9 +8,8 @@ public class Persona {
     private int anioNacimiento;
 
     public Persona(String nombre, String apellido, int anioNacimiento) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.anioNacimiento = anioNacimiento;
+        setNombreYApellido(nombre,apellido);
+        setAnioNacimiento(anioNacimiento);
     }
     
     public String getNombreCompleto(){
