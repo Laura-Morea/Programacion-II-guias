@@ -1,17 +1,17 @@
 package Empleado;
 
 public class Empleado {
-    private String DNI;
-    private String nombre;
-    private String apellido;
-    private double salarioBase;
-    private EstadoCivil estadoCivil=EstadoCivil.CASADO;
-    private int cantHijos;
-    public static final double PORC_AUMENTO_HIJOS=3/100;
-    public static final double PORC_AUMENTO_LIMITE=10/100;
-    public static final double PORC_DESCUENTO_SOLTERO=4/100;
+    String DNI;
+    String nombre;
+    String apellido;
+    double salarioBase;
+    EstadoCivil estadoCivil=EstadoCivil.CASADO;
+    int cantHijos;
+    static final double PORC_AUMENTO_HIJOS=3/100;
+    static final double PORC_AUMENTO_LIMITE=10/100;
+    static final double PORC_DESCUENTO_SOLTERO=4/100;
 
-    public enum EstadoCivil {
+    enum EstadoCivil {
         SOLTERO,
         CASADO,
         DIVORCIADO,
@@ -28,9 +28,9 @@ public class Empleado {
             if(salarioFinal>salarioBase*(1+PORC_AUMENTO_LIMITE)){
                 salarioFinal=salarioBase*(1+PORC_AUMENTO_LIMITE);
             }
-        }
-        if(estadoCivil.equals(EstadoCivil.SOLTERO)){
+            if(estadoCivil.equals(EstadoCivil.SOLTERO)){
             salarioFinal=salarioFinal*(1-PORC_DESCUENTO_SOLTERO);
+            }
         }
         return salarioFinal;
     }
