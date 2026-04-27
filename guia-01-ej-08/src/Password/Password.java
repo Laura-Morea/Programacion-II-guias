@@ -8,43 +8,44 @@ public class Password {
     public static final int CARACTERES_PARA_NUEVA=6;
     
     public Password(){
-        password=generarAleatorio(CARACTERES_FUERTE);
+        this(CARACTERES_FUERTE);
     }
     
     public Password(int n){
+        if(n<CARACTERES_PARA_NUEVA)
+            throw new RuntimeException("Una contasenia no puede tener menos de "+ CARACTERES_PARA_NUEVA +" caracteres");
         password=generarAleatorio(n);
     }
     
     public Password(String nueva){
-        nuevoValor(nueva);
+        setValor(nueva);
     }
     
     public boolean esFuerte(){
         return (password.length()>=CARACTERES_FUERTE);
     }
     
-    public boolean nuevoValor(String nuevaPassword){
-        if(nuevaPassword!=null&&nuevaPassword.length()>=CARACTERES_PARA_NUEVA){
-            password=nuevaPassword;
-            System.out.println("Contrasenia cambiada exitosamente");
-        } else{
-            System.out.println("No se pudo hacer el cambio de contrasenia. Debe ser mayor o igual a 6 caracteres");
+    private void setValor(String nuevaPassword){
+        if(nuevaPassword==null||nuevaPassword.length()<CARACTERES_PARA_NUEVA){
+            throw new RuntimeException("No se pudo hacer el cambio de contrasenia. Debe ser mayor o igual a "+ CARACTERES_PARA_NUEVA +" caracteres");
         }
-        return password==nuevaPassword;
+        password=nuevaPassword;
     }
     
     private String generarAleatorio(int n){
+        final int MIN_ASCII_IMPR=32;
+        final int MAX_ASCII_IMPR=126;
         Random r= new Random();
         char[] retorno = new char[n];
-        if(n<CARACTERES_PARA_NUEVA){
-            retorno=null;
-            throw new RuntimeException("No puede haber una password de menos de 6 caracteres");
+        for(int i=0;i<n;i++){
+            retorno[i]=(char)r.nextInt(MIN_ASCII_IMPR,MAX_ASCII_IMPR+1); 
         }
-        else {
-            for(int i=0;i<n;i++){
-                retorno[i]=(char)r.nextInt(32,127);
-            }
-        }    
         return String.valueOf(retorno);
     }
+
+    @Override
+    public String toString() {
+        return "Password{" + "password=" + password + '}';
+    }
+    
 }

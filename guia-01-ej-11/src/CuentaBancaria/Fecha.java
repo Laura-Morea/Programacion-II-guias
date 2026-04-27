@@ -1,4 +1,4 @@
-package Fecha;
+package CuentaBancaria;
 
 public class Fecha {
     private int dia;
@@ -23,6 +23,7 @@ public class Fecha {
         return anio;
     }
 
+
     public void setFecha(int dia, int mes, int anio) {
         while (dia>DIAS_POR_MES[(mes-1)%CANT_MESES]||mes>CANT_MESES) {            
             if(dia>DIAS_POR_MES[(mes-1)%CANT_MESES]){
@@ -46,16 +47,6 @@ public class Fecha {
  
     public String fechaFormatoDdMmAa(){
         return dia+"/"+mes+"/"+anio%100;
-    }
-    
-    public boolean esNavidad(){
-        return dia==25&&mes==12;
-    }
-    
-    
-    // hacer una función mejor. estoy re cerca, chequear acá que con mes 12 se va de rango, debería hacer que ahí se asigne la posicion cero
-    public void sumarUnMes(){
-        setFecha(dia,(mes+1),anio);
     }
 
     @Override

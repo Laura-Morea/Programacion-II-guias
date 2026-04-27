@@ -1,0 +1,43 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>190</x><y>30</y><w>260</w><h>240</h></coordinates><panel_attributes>ImpresoraMonocromatica
+--
+- encendida: boolean
+- cantHojas: int
+- nivelTinta: int
+_+ NIVEL_MAXIMO_TINTA: int_
+_+ MAX_HOJAS: int_
+_+ CANT_CHAR_TINTA: int_
+_+ CANT_CHAR_HOJA: int_
+--
++ ImpresoraMonocromatica()
++ encender(): void
++ apagar(): void
++ nivelSegunCantCaracteres(int): int
++ recargarBandeja(int): void
++ imprimirDocumento(Documento): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>70</y><w>210</w><h>190</h></coordinates><panel_attributes>Documento
+--
+- titulo: String
+- cuerpo: String
+--
++ Documento(String, String)
+- setTitulo(String)
++ agregar(String)
++ reescribir(String)
++ getTitulo(): String
++ getCuerpo(): String
++ getFecha(): Fecha
++ cantCaracteres(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>120</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+m1=*</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>330</y><w>210</w><h>190</h></coordinates><panel_attributes>Fecha
+--
+- dia: int
+- mes: int
+- anio: int
+_+ CANT_MESES: int_
+_+ DIAS_POR_MES: int[]_
+--
++ Fecha(int, int, int)
++ Fecha()
+- setFecha(int,int,int): void
++ fechaFormatoDdMmAa(): String
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>250</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- fecha</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>

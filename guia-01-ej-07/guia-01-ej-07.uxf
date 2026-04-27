@@ -1,0 +1,18 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>140</x><y>90</y><w>210</w><h>110</h></coordinates><panel_attributes>Robot
+--
+- nombre: String
+--
++ Robot(String)
++ saludar(): void
++ saludar(Persona): void
++ getNombre(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>70</y><w>210</w><h>150</h></coordinates><panel_attributes>Persona
+--
+- nombre: String
+- telefono: int
+_+ MIN_DIGITOS_TELEFONO: int_
+--
++ Persona(String, telefono)
++ getTelefono(): int
++ getNombre(): String
++ setTelefono(int): void
+- setNombre(String): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>140</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element></diagram>

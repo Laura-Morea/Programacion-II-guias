@@ -1,4 +1,6 @@
-package Fecha;
+package ImpresoraMonocromatica;
+
+import java.time.LocalDate;
 
 public class Fecha {
     private int dia;
@@ -10,18 +12,11 @@ public class Fecha {
     public Fecha(int dia, int mes, int anio) {
         setFecha(dia,mes,anio);
     }
-
-    public int getDia() {
-        return dia;
+     
+    public Fecha(){
+        setFecha(LocalDate.now().getDayOfMonth(),LocalDate.now().getMonthValue(), LocalDate.now().getYear());
     }
 
-    public int getMes() {
-        return mes;
-    }
-
-    public int getAnio() {
-        return anio;
-    }
 
     public void setFecha(int dia, int mes, int anio) {
         while (dia>DIAS_POR_MES[(mes-1)%CANT_MESES]||mes>CANT_MESES) {            
@@ -43,19 +38,9 @@ public class Fecha {
         this.mes=mes;
         this.anio = anio; 
    }
- 
+    
     public String fechaFormatoDdMmAa(){
         return dia+"/"+mes+"/"+anio%100;
-    }
-    
-    public boolean esNavidad(){
-        return dia==25&&mes==12;
-    }
-    
-    
-    // hacer una función mejor. estoy re cerca, chequear acá que con mes 12 se va de rango, debería hacer que ahí se asigne la posicion cero
-    public void sumarUnMes(){
-        setFecha(dia,(mes+1),anio);
     }
 
     @Override

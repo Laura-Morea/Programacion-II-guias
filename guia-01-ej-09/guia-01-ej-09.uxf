@@ -1,0 +1,45 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>60</x><y>90</y><w>260</w><h>220</h></coordinates><panel_attributes>Persona
+--
+- nombre: String
+- apellido: String
+--
++ Persona(String, String, Fecha, Domicilio)
++ getNombreCompleto(): String
++ getEdad(): int
+- yaCumplio(): boolean
++ getDomicilioPersonal(): Domicilio
++ esMayorQue(int): boolean
++ setNombre(String): void
++ setApellido(String): void
++ setNombreYApellido(String,String): void
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>0</y><w>210</w><h>220</h></coordinates><panel_attributes>Fecha
+--
+- dia: int
+- mes: int
+- anio: int
+_+ DIAS_POR_MES: int[]_
+_+ CANT_MESES: int_
+--
++ Fecha(int,int,int)
++ getDia(): int
++ getMes(): int
++ getAnio():int
+- setFecha(int, int, int): void
++ fechaFormatoDdMmAa(): String
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>180</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- fechaDeNacimiento
+m1=1</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>250</y><w>210</w><h>190</h></coordinates><panel_attributes>Domicilio
+--
+- calle: String
+- altura: int
+- barrio: String
+_+ MAX_DIGITOS_ALTURA: int_
+--
++ Domicilio(String, int, String)
+- setCalle(Sting): void
+- setAltura(int): void
+- setBarrio(String): void
++ getDomicilio(): String
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>260</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- domicilioPersonal
+m1=1</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element></diagram>

@@ -22,7 +22,21 @@ Crea un password cuyo valor se crea automáticamente.
 public class Test {
 
     public static void main(String[] args) {
-
+        Password p1= new Password();
+        Password p2= new Password(9);
+        Password p3= new Password("qwerty");
+        
+        //Password pFallida= new Password("as");
+        
+        Password[] pruebas = {p1,p2,p3};
+        
+        for (int i = 0; i < pruebas.length; i++) {
+            System.out.println(pruebas[i]);
+            System.out.println(pruebas[i].esFuerte());
+            System.out.println("-----");
+        }
+        
+        /*
         // Test 1: Constructor por defecto (genera password de 8 caracteres)
         System.out.println("--- Test 1: Constructor por defecto ---");
         Password p1 = new Password();
@@ -47,16 +61,11 @@ public class Test {
 
         System.out.println("------------------------------------");
 
-        // Test 4: Metodo nuevoValor
-        System.out.println("--- Test 4: Cambiando valor a p1 ---");
-        p1.nuevoValor("passMuyFuerte123");
-        System.out.println("Es fuerte p1 ahora? " + p1.esFuerte());
-
         System.out.println("------------------------------------");
 
-        // Test 5: Intentar generar una password muy corta
-        System.out.println("--- Test 5: Password de 4 caracteres ---");
-        Password p5 = new Password(4);
+        // Test 4: Intentar generar una password muy corta
+        System.out.println("--- Test 4: Password de 4 caracteres ---");
+        Password p5 = new Password(4);*/
     }
-    
+   
 }

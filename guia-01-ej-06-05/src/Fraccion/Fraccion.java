@@ -24,7 +24,7 @@ public class Fraccion {
         if(denominador!=0)
             this.denominador = denominador;
         else
-            this.denominador=1;
+            throw new RuntimeException("No se puede dividir por cero");
     }   
 
     public void mostrarFraccion(){
