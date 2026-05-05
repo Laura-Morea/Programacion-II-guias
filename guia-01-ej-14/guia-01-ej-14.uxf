@@ -1,0 +1,51 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>130</x><y>80</y><w>210</w><h>190</h></coordinates><panel_attributes>MaquinaDeCafe
+--
+- marca: String
+- encendida: boolean
+--
++ MaquinaDeCafe(String)
++ encender(): void
++ servirCafe(TipoCafe): void
++ recargarLeche(int): void
++ calentarAgua(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>250</y><w>210</w><h>190</h></coordinates><panel_attributes>ModuloLeche
+--
+- liquido: int
+_+ MIN_CANT_LECHE: int = 0_
+_+ MAX_CANT_LECHE: int = 5_
+--
++ ModuloLeche()
++ recargarLeche(int): void
++ preparado(TipoCafe): boolean
++ prepararLeche(TipoCafe): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>20</y><w>210</w><h>190</h></coordinates><panel_attributes>ModuloAgua
+--
+- temperatura: double
+- enMantenimiento: boolean
+_+ TEMP_MIN: double = 70.0_
+_+ TEMP_CALENTADO double =80.0_
+--
++ calentarAgua(): void
++ repararModulo(): void
++ preparado(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>340</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoCafe
+--
+EXPRESSO(0,null)
+LATTE(3, TexturaLeche.ESPUMOSA)
+LAGRIMA(2,TexturaLeche.LIQUIDA)
+- cantLeche: int
+--
+- TipoCafe(int, TexturaLeche)
++ getCantLeche(): int
++ getTextura(): TexturaLeche</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>210</y><w>240</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+                              	- moduloLeche
+m1=1</panel_attributes><additional_attributes>220;120;90;120;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>110</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- moduloAgua
+m1=1</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>510</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TexturaLeche
+--
+ESPUMOSA
+NORMAL
+LIQUIDA</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>490</y><w>200</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- textura
+m1=1</panel_attributes><additional_attributes>180;80;10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>260</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>430</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+- texturaActual
+m1=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>400</y><w>190</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element></diagram>

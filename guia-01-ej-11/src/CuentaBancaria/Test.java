@@ -13,14 +13,13 @@ public class Test {
         Domicilio d1= new Domicilio("Av. Triunvirato",3174, "Villa Ortuzar");
         CuentaBancaria c1=new CuentaBancaria(CuentaBancaria.Tipo.CAJA_DE_AHORRO,new Persona("Fulano","Gomez",new Fecha(16,04,1990),d1));
         CuentaBancaria c2= new CuentaBancaria(CuentaBancaria.Tipo.CUENTA_CORRIENTE,new Persona("Mengana", "Torres", new Fecha(23,11,1991),d1));
-        
         CuentaBancaria[] cuentas={c1,c2};
         System.out.println("\n\n"+c1.toString()+"\n"+c2.toString());
         System.out.println("\nCambio de domicilio");
-//        d1= new Domicilio("Dr. Pedro Rivera",4523,"Villa Urquiza");
+        d1= new Domicilio("Dr. Pedro Rivera",4523,"Villa Urquiza");
 //        c1.getTitular().setDomicilioPersonal(d1);
 //        c2.getTitular().setDomicilioPersonal(d1); //hay que cambiar ambos?
-        d1.setCambioDomicilio("Dr. Pedro Rivera",4523,"Villa Urquiza"); //cambio uno solo, pero estoy 
+       // d1.setCambioDomicilio("Dr. Pedro Rivera",4523,"Villa Urquiza"); //cambio uno solo, pero estoy 
                                                                         //afectando a un objeto ya creado que era independiente
         
         for (int i=0; i<2;i++){

@@ -11,18 +11,6 @@ public class Documento {
         this.fecha= new Fecha();
     }
     
-    public Fecha getFecha() {
-        return fecha;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getCuerpo() {
-        return cuerpo;
-    }
-    
     public int cantCaracteres(){
         return fecha.fechaFormatoDdMmAa().length()+titulo.length()+cuerpo.length();
     }
@@ -40,4 +28,10 @@ public class Documento {
         if(texto!=null)
             this.cuerpo=texto;
     }
+
+    @Override
+    public String toString() {
+        return fecha.fechaFormatoDdMmAa() + "\t\t**" + titulo + "**\n" + cuerpo ;
+    }
+    
 }

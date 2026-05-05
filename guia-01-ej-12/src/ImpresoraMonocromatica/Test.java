@@ -32,8 +32,8 @@ public class Test {
         System.out.println("\n\nEncendiendo y probando nuevamente");
         i1.encender();
         i1.imprimirDocumento(d1);
-        System.out.println("\n\nAgregamos 3 hojas");
-        i1.recargarBandeja(5);
+        System.out.println("\n\nAgregamos 8 hojas");
+        i1.recargarBandeja(8);
         i1.imprimirDocumento(d1);
         System.out.println("\n\nAgregamos texto al documento y volvemos a imprimir");
         d1.agregar("\nCursamos todos los martes en el Instituto Superior del Profesorado Tecnico de 13 a 17:20hs");

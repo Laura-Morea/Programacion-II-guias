@@ -1,19 +1,13 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>190</x><y>30</y><w>260</w><h>240</h></coordinates><panel_attributes>ImpresoraMonocromatica
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>170</x><y>0</y><w>260</w><h>240</h></coordinates><panel_attributes>ImpresoraMonocromatica
 --
 - encendida: boolean
-- cantHojas: int
-- nivelTinta: int
-_+ NIVEL_MAXIMO_TINTA: int_
-_+ MAX_HOJAS: int_
-_+ CANT_CHAR_TINTA: int_
-_+ CANT_CHAR_HOJA: int_
 --
 + ImpresoraMonocromatica()
 + encender(): void
 + apagar(): void
-+ nivelSegunCantCaracteres(int): int
++ recargarTinta(int): void
 + recargarBandeja(int): void
-+ imprimirDocumento(Documento): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>70</y><w>210</w><h>190</h></coordinates><panel_attributes>Documento
++ imprimirDocumento(Documento): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>40</y><w>210</w><h>190</h></coordinates><panel_attributes>Documento
 --
 - titulo: String
 - cuerpo: String
@@ -25,8 +19,8 @@ _+ CANT_CHAR_HOJA: int_
 + getTitulo(): String
 + getCuerpo(): String
 + getFecha(): Fecha
-+ cantCaracteres(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>120</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
-m1=*</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>330</y><w>210</w><h>190</h></coordinates><panel_attributes>Fecha
++ cantCaracteres(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>90</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+m1=*</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>300</y><w>210</w><h>190</h></coordinates><panel_attributes>Fecha
 --
 - dia: int
 - mes: int
@@ -38,6 +32,24 @@ _+ DIAS_POR_MES: int[]_
 + Fecha()
 - setFecha(int,int,int): void
 + fechaFormatoDdMmAa(): String
-+ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>250</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>220</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
 m1=1
-- fecha</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>
+- fecha</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>310</y><w>210</w><h>110</h></coordinates><panel_attributes>BandejaHojas
+--
+- cantHojas: int
+_+ MAX_HOJAS: int = 35_
+_+ CANT_CHAR_HOJA: int = 20_
+--
++ recargarBandeja(int): void
+_- hojasPorCaracter(int): int_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>310</y><w>210</w><h>120</h></coordinates><panel_attributes>CartuchoTinta
+--
+- nivelTinta: int
+_+ NIVEL_MAXIMO_TINTA: int_
+_+ CANT_CHAR_TINTA: int_
+--
++ nivelSegunCantCaracteres(int): int
++ recargar(int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>230</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+- bandeja
+m2=1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>230</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+- cartucho
+m2=1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>

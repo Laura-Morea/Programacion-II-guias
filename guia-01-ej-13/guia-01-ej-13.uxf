@@ -1,0 +1,75 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>312</x><y>340</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EntidadFinanciera
+--
+_VISA_
+_MASTER_CARD_
+_MAESTRO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>422</x><y>260</y><w>140</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+- entidadFinanciera
+m2=1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>732</x><y>60</y><w>290</w><h>230</h></coordinates><panel_attributes>Persona
+--
+- nombre: String
+- apellido: String
+--
++ Persona(String, String, Fecha, Domicilio)
++ Persona(String,String,int,int,int,String,int,String)
++ getNombreCompleto(): String
++ mostrarEstado(): String
++ getEdad(): int
+- yaCumplio(): boolean
++ getDomicilioPersonal(): Domicilio
++ setNombre(String): void
++ setApellido(String): void
++ setNombreYApellido(String, String): void
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>852</x><y>380</y><w>200</w><h>200</h></coordinates><panel_attributes>Fecha
+--
+- dia: int
+- mes: int
+- anio: int
+_+ CANT_DIAS_POR_MES: int[]_
+_+ CANT_MESES: int_
+--
++ Fecha(int,int,int)
++ getDia(): int
++ getMes(): int
++ getAnio(): int
+- setFecha(int,int,int): void
++ fechaFormatoDdMmAa(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>582</x><y>370</y><w>260</w><h>190</h></coordinates><panel_attributes>Domicilio
+--
+- calle: String
+- altura: int
+- barrio: String
+--
++ Domicilio(String,int,String)
+- setCalle(String): void
+- setAltura(int): void
+- setBarrio(String): void
++ getDomicilio(): String
++ setCambioDomicilio(String,int,String): void
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>922</x><y>280</y><w>130</w><h>120</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+- fechaNacimiento
+m1=1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>732</x><y>280</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+- domicilioPersonal
+m1=1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2</x><y>70</y><w>290</w><h>190</h></coordinates><panel_attributes>POSNET
+--
+_+ MAX_CUOTAS: int_
+_+ MIN_CUOTAS: int_
+_+ PORC_RECARGO_CUOTAS: double_
+--
++ efectuarPago(TarjetaCredito,double,int): String
+- recargarMonto(double,int): double
+- montoPorCuotas(double,int): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>282</x><y>120</y><w>80</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>60;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>342</x><y>80</y><w>340</w><h>190</h></coordinates><panel_attributes>TarjetaCredito
+--
+- entidadBancaria: String
+- numeroTarjeta: String
+- saldoDisponible: double
+_+ MAYORIA_EDAD: int_
+_+ DIGITOS_TARJETA: int_
+--
++ TarjetaCredito(EntidadFinanciera,String,double,Persona)
++ TarjetaCredito(EntidadFinanciera, String, double, String, 
+    String, int, int, int, String, int. String)
+- setNumeroTarjeta(): void
++ saldoSuficiente(double): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>150</y><w>80</w><h>50</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+- titular
+m1=1</panel_attributes><additional_attributes>60;20;10;20</additional_attributes></element></diagram>

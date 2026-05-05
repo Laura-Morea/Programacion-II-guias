@@ -1,0 +1,101 @@
+[33mcommit 260ba99386d7d572eb3e2275f36a0a79819f4d9f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Mon Apr 27 12:34:33 2026 -0300
+
+    Corregidos y creo que terminados
+
+[33mcommit 25fec5e08cbbca98d219bf93e4e74b7f79f61f19[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 15:00:48 2026 -0300
+
+    Corregido UML
+
+[33mcommit 04a28b7bd45fd58c9da6018848d6c349c8b53cfa[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 14:49:58 2026 -0300
+
+    agregado UML
+
+[33mcommit 1a1facbc75d121f29a28670e2a58445d9908df74[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 14:39:57 2026 -0300
+
+    Terminado
+
+[33mcommit bdb13fa822ab3178be056d2f3d725ca430f989d2[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 12:03:15 2026 -0300
+
+    Terminado pero falta el throw catch
+
+[33mcommit 153e7fa1327e71bf8c56c21157a89496e6e9b786[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 11:47:53 2026 -0300
+
+    Terminado y testeado
+
+[33mcommit 8d2a4faa4797831c02263dc56268b669773891c2[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 11:04:47 2026 -0300
+
+    Agregado enunciado falta solucionar el setFecha
+
+[33mcommit ff8988733ca4390a43ff2f9b071f4bc4d6c31990[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 10:28:58 2026 -0300
+
+    Agregado enunciado y chequeado el sumar un mes
+
+[33mcommit c7275a5f8375376986499a88d485024ec13956a7[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 10:13:56 2026 -0300
+
+    Agregado enunciado y condiciones al CBU
+
+[33mcommit fd02bb4d5f95216c9989de905b154e8ba9720501[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 10:09:25 2026 -0300
+
+    Terminado
+
+[33mcommit cb6d58954c49df2b62daca17b4259a1806d36181[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 09:54:59 2026 -0300
+
+    Terminado
+
+[33mcommit 5742e248547d5d05968b68e6c0bae6bc9932df14[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 09:48:46 2026 -0300
+
+    Modificado salario y constantes para que las tome como double
+
+[33mcommit 6ed3be9d9d5babd5d81045fa1e7cd9a0612e59dc[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 08:57:31 2026 -0300
+
+    Agregado enunciado y modificado salario soltero
+
+[33mcommit d021a74644da38f00d7e56d73bbf5bc9f25e2632[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 08:45:18 2026 -0300
+
+    Agregado enunciado
+
+[33mcommit 2ab2f8a02f5653d410ce01b25f8ecfcf6d5ddad0[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 08:41:15 2026 -0300
+
+    Terminado
+
+[33mcommit f9e70c137ff853fe8d95ca1b31a6aec6151be03d[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Tue Apr 21 08:40:51 2026 -0300
+
+    Terminado
+
+[33mcommit e1dfd5b7d1c97e6e6a824b2de2672034f55a8ca4[m[33m ([m[1;33mtag: [m[1;33mv1[m[33m)[m
+Author: Laura E Morea <laura.morea.inspt@gmail.com>
+Date:   Sun Apr 19 15:58:47 2026 -0300
+
+    Primer commit
