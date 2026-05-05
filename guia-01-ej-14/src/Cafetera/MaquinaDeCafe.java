@@ -24,10 +24,7 @@ public class MaquinaDeCafe {
     public void servirCafe(TipoCafe tipo){
         if(encendida){
             if(moduloAgua.preparado()){
-                if(moduloLeche.preparado(tipo)){
-                    moduloLeche.prepararLeche(tipo);
-                    System.out.println("El cafe "+ tipo.name() + " se ha servido correctamente\n");
-                }
+                moduloLeche.prepararLeche(tipo);
             }
         } else
             System.out.println("La maquina esta apagada\n");

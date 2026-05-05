@@ -15,7 +15,6 @@ _+ MAX_CANT_LECHE: int = 5_
 --
 + ModuloLeche()
 + recargarLeche(int): void
-+ preparado(TipoCafe): boolean
 + prepararLeche(TipoCafe): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>20</y><w>210</w><h>190</h></coordinates><panel_attributes>ModuloAgua
 --
 - temperatura: double

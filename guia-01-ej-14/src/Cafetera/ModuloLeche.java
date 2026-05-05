@@ -18,17 +18,13 @@ public class ModuloLeche {
             liquido=MAX_CANT_LECHE;
     }
     
-    public boolean preparado(TipoCafe tipo){
-        boolean ret=false;
+    public void prepararLeche(TipoCafe tipo){
         if(tipo.getCantLeche()>liquido)
             System.out.println("Hay que recargar el modulo de leche. Es insuficiente para este cafe\n");
-        else
-            ret=true;
-        return ret;
-    }
-    
-    public void prepararLeche(TipoCafe tipo){
-        texturaActual=tipo.getTextura();
-        liquido-=tipo.getCantLeche();
+        else {
+            texturaActual=tipo.getTextura();
+            liquido-=tipo.getCantLeche();
+            System.out.println("El cafe "+ tipo.name() + " se ha servido correctamente\n");
+        }
     }
 }
